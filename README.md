@@ -14,7 +14,7 @@ Tradingdata about the different cryptocurrency assets will be retrieved from a p
 The data transformation of the tweets and financial data is done locally on a Jupyter Notebook. However, in a productive scenario a data lake could be created using using Amazons Elastic Map Reduce (EMR) and Spark.
 As last step of the ETL process the data are written as a parquet file to a S3 bucket. At this point business analysts and data scientist can post-process the cleaned parquet files support insight generation and decision making.
 
-![alt text]("images/Datamodel.png")
+![alt text]("https://raw.githubusercontent.com/MatthiasReichel/Cryptocurrency-Datalake-Spark/master/images/Datamodel.png")
 
 Note: The calls to the TwitterAPI are strictly limited. Therefore, the decision was made to add an additional layer storing extracted tweets on a S3 bucket. This step is necessary to avoid a request limit is reached.
 
@@ -22,7 +22,7 @@ Note: The calls to the TwitterAPI are strictly limited. Therefore, the decision 
 
 Note that "tables" are used as synonym for spark dataframes. The Datamodel shows the datamodel which was implemented as part of the ETL process. However, as Spark (Pyspark) is applied spark dataframes were created instead of sql tables.  
 
-![alt text]("images/High-Level-Architecture.png")
+![alt text]("https://raw.githubusercontent.com/MatthiasReichel/Cryptocurrency-Datalake-Spark/master/images/High-Level-Architecture.png")
 
 # Considerations
 
